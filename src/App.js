@@ -134,47 +134,29 @@ function Table({ columns, data }) {
 }
 
 function App() {
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: 'Name',
-        columns: [
-          {
-            Header: 'First Name',
-            accessor: 'firstName',
-          },
-          {
-            Header: 'Last Name',
-            accessor: 'lastName',
-          },
-        ],
-      },
-      {
-        Header: 'Info',
-        columns: [
-          {
-            Header: 'Age',
-            accessor: 'age',
-            width: 50,
-          },
-          {
-            Header: 'Visits',
-            accessor: 'visits',
-            width: 60,
-          },
-          {
-            Header: 'Status',
-            accessor: 'status',
-          },
-          {
-            Header: 'Profile Progress',
-            accessor: 'progress',
-          },
-        ],
-      },
-    ],
-    []
-  )
+    const columns = React.useMemo(
+      () => [
+            {
+              Header: 'Age',
+              accessor: 'age',
+              width: 50,
+            },
+            {
+              Header: 'Visits',
+              accessor: 'visits',
+              width: 60,
+            },
+            {
+              Header: 'Status',
+              accessor: 'status',
+            },
+            {
+              Header: 'Profile Progress',
+              accessor: 'progress',
+            },
+          ],
+      []
+    )
 
   const data = React.useMemo(() => makeData(10), [])
 
